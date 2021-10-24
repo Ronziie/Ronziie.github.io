@@ -78,11 +78,11 @@
         }
         h2 {
             margin-bottom: 0.5rem;
-            opacity: 0.6;
+            
         }
         @media(max-width: 700px) {
             #time {
-                font-size: 6rem;
+                font-size: 5rem;
 
             }
         }
@@ -165,12 +165,10 @@
             line-height: 0px;
 
         }
-        @media(max-width: 700px) {
-          .background-image {
-            max-height: fit-content;
-
+        @media only screen and (max-width: 400px) {
+          #btn {
+            width: 200px;
           }
-
         }
           
 
@@ -264,20 +262,22 @@ function setBgGreet() {
     greeting.textContent = 'Good Morning, ';
     document.body.style.backgroundRepeat = "no-repeat";
     //document.body.style.backgroundSize = "100%";//
+    document.body.style.height = "1000px";
+
   } else if (hour < 18) {
     // Afternoon
     document.body.style.backgroundImage = "url('https://images.pexels.com/photos/771883/pexels-photo-771883.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
     greeting.textContent = 'Good Afternoon, ';
     document.body.style.color = 'white';
     document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "100%";
+    //document.body.style.backgroundSize = "100%";//
   } else {
     // Evening
     document.body.style.backgroundImage = "url('https://1.bp.blogspot.com/-5ZaOdrnFUVE/WGYVfiBUIFI/AAAAAAAALzY/Lx3VgSSvniwlmgKuRiG85CxbbwfbDUPqwCLcB/s1600/Coding%2BWallpapers%2B4.jpg')";
     greeting.textContent = 'Good Evening, ';
     document.body.style.color = 'white';
     document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "100%";
+    //document.body.style.backgroundSize = "100%";//
   }
 }
 
