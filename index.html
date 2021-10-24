@@ -157,13 +157,25 @@
             margin-left: 100%;
             
         }
-    #btn {
-	margin: 20px;
-	background: #ddd;
-	width: 18%;
-	padding: 20px;
-	line-height: 0px;
-}
+        #btn {
+            margin: 20px;
+            background: #ddd;
+            width: 18%;
+            padding: 20px;
+            line-height: 0px;
+
+        }
+        @media(max-width: 700px) {
+          .background-image {
+            max-height: fit-content;
+
+          }
+
+        }
+          
+
+    
+      
         
     </style> 
 
@@ -248,10 +260,10 @@ function setBgGreet() {
 
   if (hour < 12) {
     // Morning
-    document.body.style.backgroundImage = "url('https://www.teahub.io/photos/full/323-3230206_beautiful-morning-flowers-nature-background-wallpapers-beautiful-hd.jpg')";
+    document.body.style.backgroundImage = "url('https://www.teahub.io/photos/full/323-3230206_beautiful-morning-flowers-nature-background-wallpapers-beautiful-hd.jpg')"
     greeting.textContent = 'Good Morning, ';
     document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "100%";
+    //document.body.style.backgroundSize = "100%";//
   } else if (hour < 18) {
     // Afternoon
     document.body.style.backgroundImage = "url('https://images.pexels.com/photos/771883/pexels-photo-771883.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
@@ -327,7 +339,6 @@ getFocus();
 	
 	
 </html>
-
 
 
 
