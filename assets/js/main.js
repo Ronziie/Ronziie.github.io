@@ -173,17 +173,5 @@
 
 })();
 
-/** formid thank you message */
-    $("#formid").submit(function(){ 
-      $('html, body').animate({
-        scrollTop: $("#formid").offset().top
-      }, 3000);
-      
-      $(this).replaceWith("<p> Thank You <p>")
-      
-      
-    })
-
-
 
 

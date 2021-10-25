@@ -9,170 +9,164 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>R. Dias</title>
 </head>
+
+<!--Landing page info-->
 <body>
-    <time id="time">11:17:04 AM</time>
-    <h1>
-        <span id="greeting">Good Afternoon</span>
-        <span id="name" contenteditable="true">Ronnie</span>
-    </h1>
-    <br>
-    <div class="containerQ">
-        <div class="quote-box">
-            <p id="quote">Quote goes here...</p>
-            <small id="author">Author</small>
-        </div>
-    </div>
-    <br> 
-    <button id="btn" type="submit" class="refresh-button">New Quote</button>
+  <time id="time">11:17:04 AM</time>
+  <h1>
+      <span id="greeting">Good Afternoon</span>
+      <span id="name" contenteditable="true">Ronnie</span>
+  </h1>
+  <br>
+
+  <div class="containerQ">
+      <div class="quote-box">
+          <p id="quote">Quote goes here...</p>
+          <small id="author">Author</small>
+      </div>
+  </div>
+
+  <br> 
+
+  <button id="btn" type="submit" class="refresh-button">New Quote</button>
+
+  <br>
+
+  <h2> Press below to enter </h2>
+  <div class="bounce-arrow">
+      <span><i class="fa fa-angle-double-down"></i></span>
+  </div>
+  <button>
+      <a href="/homepage.html">Portfolio</a>
+  </button>
+  <h2 id="focus" contenteditable="true"></h2>
+<!--Landing page info-->
 
 
 
+<!--Landing page CSS-->
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Quicksand', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: black;
 
-    <br>
-    <h2> Press below to enter </h2>
-    <div class="bounce-arrow">
-        <span><i class="fa fa-angle-double-down"></i></span>
-    </div>
-    <button>
-        <a href="/homepage.html">Portfolio</a>
-    </button>
-    <h2 id="focus" contenteditable="true"></h2>
+}
+#time {
+    font-size: 8rem;
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Quicksand', sans-serif; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100vh;
-            color: black;
-
-        }
-        #time {
-            font-size: 8rem;
-
-        }
-        h1 {
-            margin-bottom: 3rem;
-        }
-        h2 {
-            margin-bottom: 0.5rem;
-            
-        }
-        @media(max-width: 700px) {
-            #time {
-                font-size: 5rem;
-
-            }
-        }
-        .bounce-arrow {
-            color: #ffffff;
-            text-decoration: none;
-            text-align: center;
-            font-size: 24px;
-        }
-        i {
-            font-size: 48px;
-            color: #fff;
-            display: inline-block;
-            width: 100%;
-            animation: bounce 2s ease infinite;
-        }
-        @keyframes bounce{
-            0%, 25%, 55%, 75%, 100%{
-                transform: translateY(0)
-            }
-            45%{
-                transform: translateY(-20px);
-            }
-            65%{
-                transform: translateY(-10px);
-            }
-            85%{
-                transform: translateY(-5px);
-            }
-        }
-        a {
-            list-style: none;
-            text-decoration: none;
-            font-family: 'Quicksand', sans-serif; 
-            color: black;
-        }
-        
-        button {
-            width: 200px;
-            height: 50px;
-            font-size: 20px;
-            border-radius: 20px;
-            border: thin;
-            background-color: rgb(196, 196, 196);
-            text-align: center;
-        }
-
-        button:hover {
-            background-color: yellow;
-        }
-        .containerQ {
-            border-radius: 10px;
-            border-style:double;
-            padding-left: 90px;
-            padding-right: 90px;
-            padding-top: 50px;
-            padding-bottom: 50px;  
-            
-        }
-        #btn {
-            border-radius: 10px;
-            border-style: double;
-            background-color: transparent;
-            background: #ddd;
-            margin: 20px;
-            font-size: 15px;
-            width: 250px;
-            height: 25px;
-        }
-        #btn:hover {
-            background-color: yellow;
-        }
-        #author {
-            margin-left: 100%;
-            
-        }
-
-        @media only screen and (max-width: 400px) {
-          #btn {
-            width: 200px;
-          }
-        }
-          
-
+}
+h1 {
+    margin-bottom: 3rem;
+}
+h2 {
+    margin-bottom: 0.5rem;
     
-      
-        
-    </style> 
+}
+@media(max-width: 700px) {
+    #time {
+        font-size: 5rem;
 
+    }
+}
+.bounce-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+}
+i {
+    font-size: 48px;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    animation: bounce 2s ease infinite;
+}
+@keyframes bounce{
+    0%, 25%, 55%, 75%, 100%{
+        transform: translateY(0)
+    }
+    45%{
+        transform: translateY(-20px);
+    }
+    65%{
+        transform: translateY(-10px);
+    }
+    85%{
+        transform: translateY(-5px);
+    }
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif; 
+    color: black;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: thin;
+    background-color: rgb(196, 196, 196);
+    text-align: center;
+}
+
+button:hover {
+    background-color: yellow;
+}
+.containerQ {
+    border-radius: 10px;
+    border-style:double;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;  
+    
+}
+#btn {
+    border-radius: 10px;
+    border-style: double;
+    background-color: transparent;
+    background: #ddd;
+    margin: 20px;
+    font-size: 15px;
+    width: 250px;
+    height: 25px;
+}
+#btn:hover {
+    background-color: yellow;
+}
+#author {
+    margin-left: 100%;
+    
+}
+
+@media only screen and (max-width: 400px) {
+  #btn {
+    width: 200px;
+  }
+}
+</style>
+<!--Landing page CSS-->
+
+
+<!--Landing page Javascript-->
   <script>
+    //Retrieve API Quote
         fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
 	"method": "GET",
 	"headers": {
@@ -189,27 +183,18 @@
     document.getElementById('author').innerHTML = '- ' + response.originator.name + ' -';
 
 })
-
 .catch(err => {
 	console.error(err);
 });
-    </script>
-	
-	<script>
 	const refreshButton = document.querySelector('.refresh-button');
 
 const refreshPage = () => {
   location.reload();
 }
-
 refreshButton.addEventListener('click', refreshPage)
+</script>
 
-
-
-
-	</script>
-</body>
-
+<!--Automated Time-->
 <script>
     // DOM Elements
 const time = document.getElementById('time'),
@@ -264,9 +249,8 @@ function setBgGreet() {
     document.body.style.backgroundImage = "url('https://images.pexels.com/photos/771883/pexels-photo-771883.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
     greeting.textContent = 'Good Afternoon, ';
     document.body.style.color = 'white';
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundRepeat = "round";
     //document.body.style.backgroundSize = "100%";
-    document.body.style.height = "1000px";
   } else {
     // Evening
     document.body.style.backgroundImage = "url('https://1.bp.blogspot.com/-5ZaOdrnFUVE/WGYVfiBUIFI/AAAAAAAALzY/Lx3VgSSvniwlmgKuRiG85CxbbwfbDUPqwCLcB/s1600/Coding%2BWallpapers%2B4.jpg')";
@@ -325,15 +309,12 @@ setBgGreet();
 getName();
 getFocus();
 
-
-
-
-
 </script>
+<!--Landing Page Javascript-->
+
 <script src="assets/js/main.js"></script>
- 	
-	
-	
+
+</body>
 </html>
 
 
