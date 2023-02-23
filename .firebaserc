@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "rd-portfolio"
-  }
+  },
+  "targets": {
+    "rd-portfolio": {
+      "hosting": {
+        "RD-Portfolio": [
+          "master"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
