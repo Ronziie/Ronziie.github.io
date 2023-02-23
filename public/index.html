@@ -1,89 +1,325 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>R. Dias</title>
+</head>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<!--Landing page info-->
+<body>
+  <time id="time">11:17:04 AM</time>
+  <h1>
+      <span id="greeting">Good Afternoon</span>
+      <span id="name" contenteditable="true">Ronnie</span>
+  </h1>
+  <br>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <div class="containerQ">
+      <div class="quote-box">
+          <p id="quote">Quote goes here...</p>
+          <small id="author">Author</small>
+      </div>
+  </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <br> 
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <button id="btn" type="submit" class="refresh-button">New Quote</button>
+
+  <br>
+
+  <h2> Press below to enter </h2>
+  <div class="bounce-arrow">
+      <span><i class="fa fa-angle-double-down"></i></span>
+  </div>
+  <button>
+      <a href="/homepage.html">Portfolio</a>
+  </button>
+  <h2 id="focus" contenteditable="true"></h2>
+<!--Landing page info-->
+
+
+
+<!--Landing page CSS-->
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Quicksand', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: black;
+
+}
+#time {
+    font-size: 8rem;
+
+}
+h1 {
+    margin-bottom: 3rem;
+}
+h2 {
+    margin-bottom: 0.5rem;
+    
+}
+@media(max-width: 700px) {
+    #time {
+        font-size: 5rem;
+
+    }
+}
+.bounce-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+}
+i {
+    font-size: 48px;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    animation: bounce 2s ease infinite;
+}
+@keyframes bounce{
+    0%, 25%, 55%, 75%, 100%{
+        transform: translateY(0)
+    }
+    45%{
+        transform: translateY(-20px);
+    }
+    65%{
+        transform: translateY(-10px);
+    }
+    85%{
+        transform: translateY(-5px);
+    }
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif; 
+    color: black;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: thin;
+    background-color: rgb(196, 196, 196);
+    text-align: center;
+}
+
+button:hover {
+    background-color: yellow;
+}
+.containerQ {
+    border-radius: 10px;
+    border-style:double;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;  
+    
+}
+#btn {
+    border-radius: 10px;
+    border-style: double;
+    background-color: transparent;
+    background: #ddd;
+    margin: 20px;
+    font-size: 15px;
+    width: 250px;
+    height: 25px;
+}
+#btn:hover {
+    background-color: yellow;
+}
+#author {
+    margin-left: 100%;
+    
+}
+
+@media only screen and (max-width: 400px) {
+  #btn {
+    width: 200px;
+  }
+}
+</style>
+<!--Landing page CSS-->
+
+
+<!--Landing page Javascript-->
+  <script>
+    //Retrieve API Quote
+        fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "0e2604ee96msh0d4dd542ffd1704p1a7825jsnf86a949bfc38",
+		"x-rapidapi-host": "quotes15.p.rapidapi.com"
+	}
+})
+.then(response => response.json())
+.then(response => {
+	console.log(response);
+    console.log(response.content);
+
+    document.getElementById('quote').innerHTML = response.content;
+    document.getElementById('author').innerHTML = '- ' + response.originator.name + ' -';
+
+})
+.catch(err => {
+	console.error(err);
+});
+	const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+refreshButton.addEventListener('click', refreshPage)
+</script>
+
+<!--Automated Time-->
+<script>
+    // DOM Elements
+const time = document.getElementById('time'),
+  greeting = document.getElementById('greeting'),
+  name = document.getElementById('name'),
+  focus = document.getElementById('focus');
+
+// Options
+const showAmPm = true;
+
+// Show Time
+function showTime() {
+  let today = new Date(),
+    hour = today.getHours(),
+    min = today.getMinutes(),
+    sec = today.getSeconds();
+
+  // Set AM or PM
+  const amPm = hour >= 12 ? 'PM' : 'AM';
+
+  // 12hr Format
+  hour = hour % 24 || 24;
+
+  // Output Time
+  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
+    sec
+  )} ${showAmPm ? amPm : ''}`;
+
+  setTimeout(showTime, 1000);
+}
+
+// Add Zeros
+function addZero(n) {
+  return (parseInt(n, 10) < 10 ? '0' : '') + n;
+}
+
+// Set Background and Greeting
+function setBgGreet() {
+  let today = new Date(),
+    hour = today.getHours();
+
+  if (hour < 12) {
+    // Morning
+    document.body.style.backgroundImage = "url('https://www.teahub.io/photos/full/323-3230206_beautiful-morning-flowers-nature-background-wallpapers-beautiful-hd.jpg')"
+    greeting.textContent = 'Good Morning, ';
+    document.body.style.backgroundRepeat = "no-repeat";
+    //document.body.style.backgroundSize = "100%";//
+    document.body.style.height = "1000px";
+
+  } else if (hour < 18) {
+    // Afternoon
+    document.body.style.backgroundImage = "url('https://images.pexels.com/photos/771883/pexels-photo-771883.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
+    greeting.textContent = 'Good Afternoon, ';
+    document.body.style.color = 'white';
+    document.body.style.backgroundRepeat = "round";
+    //document.body.style.backgroundSize = "100%";
+  } else {
+    // Evening
+    document.body.style.backgroundImage = "url('https://1.bp.blogspot.com/-5ZaOdrnFUVE/WGYVfiBUIFI/AAAAAAAALzY/Lx3VgSSvniwlmgKuRiG85CxbbwfbDUPqwCLcB/s1600/Coding%2BWallpapers%2B4.jpg')";
+    greeting.textContent = 'Good Evening, ';
+    document.body.style.color = 'white';
+    document.body.style.backgroundRepeat = "no-repeat";
+    //document.body.style.backgroundSize = "100%";//
+  }
+}
+
+// Get Name
+function getName() {
+  if (localStorage.getItem('name') === null) {
+    name.textContent = '[Enter Name]';
+  } else {
+    name.textContent = localStorage.getItem('name');
+  }
+}
+
+// Set Name
+function setName(e) {
+  if (e.type === 'keypress') {
+    // Make sure enter is pressed
+    if (e.which == 13 || e.keyCode == 13) {
+      localStorage.setItem('name', e.target.innerText);
+      name.blur();
+    }
+  } else {
+    localStorage.setItem('name', e.target.innerText);
+  }
+}
+
+
+
+// Set Focus
+function setFocus(e) {
+  if (e.type === 'keypress') {
+    // Make sure enter is pressed
+    if (e.which == 13 || e.keyCode == 13) {
+      localStorage.setItem('focus', e.target.innerText);
+      focus.blur();
+    }
+  } else {
+    localStorage.setItem('focus', e.target.innerText);
+  }
+}
+
+name.addEventListener('keypress', setName);
+name.addEventListener('blur', setName);
+focus.addEventListener('keypress', setFocus);
+focus.addEventListener('blur', setFocus);
+
+// Run
+showTime();
+setBgGreet();
+getName();
+getFocus();
+
+</script>
+<!--Landing Page Javascript-->
+
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
+
+
+
+
+
+
+

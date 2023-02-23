@@ -1,0 +1,35 @@
+// firebase deployment 
+
+
+//initalize firebase
+> Firebase init
+
+//Are you ready to proceed?
+
+> {Enter}
+
+//Project setup, Select existing project made 
+
+//Hosting set up 
+//Do you want to use public directory?
+> {Enter}
+
+//Configure as single page app (Rewrite all url to index.html}
+
+> y 
+
+//Overwrite public/index already exists?
+
+> y 
+
+//delpoyment complete
+
+//in deploying logs it should say hosting[project-name] found "multiple not 1" files in public
+
+//Copy over all files into public folder (similiarity you would run command npm run build when github deployment in order to move files to public folder)
+//Copy "CSS", "JS", "HTML" into public and any assets
+
+
+firebase deploy.
+
+
